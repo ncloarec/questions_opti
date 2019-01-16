@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+\PassOptionsToPackage{dvipsnames,svgnames}{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath,amssymb,amsthm,epsfig,stmaryrd,bbm,mathrsfs,stmaryrd}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage{titlesec,comment}
+\usepackage{mesMacros}
+\usepackage{multicol}
+\usepackage{upgreek}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{calc}
+\usepackage{float}
+\usepackage{pifont}
+\usepackage{bbm}
+
+\graphicspath{ {./images/} }
+
+\renewcommand\theequation{{\color{electriccrimson}\arabic{equation}}}
+
+
+
+
+
+
+\usepackage[top=0.5cm,left=2cm,right=2cm,bottom=1cm]{geometry}
+
+% Colors
+%--------------------------------------------------------------------------
+\RequirePackage{xcolor}
+\definecolor{ggyellow}{RGB}{255,185,88}
+\definecolor{ggred}{RGB}{219,68,55}
+\definecolor{ggblue}{RGB}{66,133,244}
+\definecolor{ggyellow}{RGB}{244,160,0}
+\definecolor{gggreen}{RGB}{15,157,88}
+\definecolor{darkgreen}{RGB}{0,100,0}
+\definecolor{myorange}{RGB}{240,84,8}
+%%%%%%%%%%% FONTE %%%%%%%%%%%%%%%%%
+\usepackage[fulloldstyle]{kpfonts}
+
+\begin{document}
+\pagestyle{empty}
+\vspace {-3cm}
+
+\fontfamily{pzc} \selectfont
+
+\shorthandoff{:!}
+\begin{tikzpicture}[every node/.style={inner sep=0pt}]
+ \node[text width= \linewidth-3.3cm](Text){%
+ ~
+ \bigskip\\
+ {\LARGE Optimisation avancée}  \hfill {\large  Nicolas CLOAREC} \\
+ ~ \bigskip \\
+ \centerline{\LARGE \normalfont Questions}
+ } ;
+ \node[shift={(-1cm,0.2cm)},anchor=north west](CNW)  at (Text.north west)
+ {\pgfornament[width=1cm]{61}};
+ \node[shift={(1cm,0.2cm)},anchor=north east](CNE)   at (Text.north east)
+ {\pgfornament[width=1cm,symmetry=v]{61}};
+ \node[shift={(-1cm,-0.5cm)},anchor=south west](CSW) at (Text.south west)
+ {\pgfornament[width=1cm,symmetry=h]{61}};
+ \node[shift={(1cm,-0.5cm)},anchor=south east](CSE)  at (Text.south east)
+ {\pgfornament[width=1cm,symmetry=c]{61}};
+ \node[shift={(0cm,0cm)}](CS) at (Text.south)
+ {\pgfornament[width=4.5cm,ydelta=+3cm]{75}};
+ \pgfornamenthline{CNW}{CNE}{north}{89}
+ \pgfornamentvline{CNW}{CSW}{west}{87}
+ \pgfornamentvline{CNE}{CSE}{east}{87}
+\end{tikzpicture}
+\shorthandoff{:!}
+\fontfamily{ptm} \selectfont
+\normalfont
+
+
+\input{body/solutions}
+
+
+\end{document}
