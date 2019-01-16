@@ -105,4 +105,19 @@ D'où
 \begin{align*}
   f ( \hat { x } ) - f \left( x ^ { * } \right) \leq \frac { 2 \beta D ^ { 2 } } { T }
 \end{align*}
+
+\textit{Question : peut-on faire mieux ?}
+
+Prenons pour s'en assurer $T=1$ itération. On a alors $\xhat = x_1$, puis par l'équation
+\eqref{eq:tele}, on a
+\begin{align*}
+  f(x_1)-f(\xopt) = \delta_1 &\leq (1-\delta_1)\delta_0 + \frac{\beta}{2}\cdot 4 D^2\\
+  &\leq \prt{1-\frac{2}{1}}\cdot \prt{f(x_0)-f(\xopt)} + 2 \beta D^2\\
+  &\leq -\underbrace{\prt{f(x_0)-f(\xopt)}}_{\geq 0} + 2 \beta D^2 \leq 2 \beta D^2\\
+\end{align*}
+Le seul moyen d'améliorer cette inégalité serait de montrer que
+\begin{align*}
+  -\prt{f(x_0)-f(\xopt)} \leq -\beta D^2,
+\end{align*}
+ce qui me semble peu évident...
 \end{rep}
